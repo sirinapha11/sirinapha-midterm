@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+<!---->
+{% block title %}
+<!---->
+{{hospital.hospital_name}} 
+{% endblock title %}
+<!---->
+{% block content %}
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Code</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for Patient in hospital.Patient.all %}
+    <tr>
+      <th scope="row">1</th>
+      <td>{{Patient.first_name}}</td>
+      <td>{{Patient.last_name}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock content %}
