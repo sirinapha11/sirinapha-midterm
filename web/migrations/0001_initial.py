@@ -44,8 +44,8 @@ class Migration(migrations.Migration):
                 ('first_name', models.CharField(max_length=255)),
                 ('last_name', models.CharField(max_length=255)),
                 ('expertise', models.CharField(max_length=255)),
-                ('Hospital', models.ManyToManyField(blank=True, default=None, null=True, to='web.Hospital')),
-                ('Patient', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='web.Patient')),
+                ('Hospital', models.ManyToManyField(blank=True, default=None, null=True, to='web.hospital')),
+                ('Patient', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='web.patient')),
             ],
             options={
                 'verbose_name': 'Physician',

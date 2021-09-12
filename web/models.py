@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Patient(models.Model):
     """Model definition for Patient."""
 
@@ -8,6 +9,7 @@ class Patient(models.Model):
     last_name = models.CharField(max_length=255)
     gender = models.CharField(max_length=50)
     age = models.CharField(max_length=10)
+   
 
 
     class Meta:
@@ -46,8 +48,7 @@ class Physician(models.Model):
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
     expertise = models.CharField(max_length=255)
-    Patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
-    Hospital = models.ManyToManyField(Hospital, default=None, blank=True, null=True)
+    
 
     class Meta:
         """Meta definition for Physician."""

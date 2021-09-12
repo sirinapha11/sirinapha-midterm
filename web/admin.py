@@ -1,10 +1,9 @@
 from django.contrib import admin
-from web.models import Hospital, Patient, Physician
+from web.models import  Patient, Hospital, Physician
  
 @admin.register(Patient)
 class PatientAdmin(admin.ModelAdmin):
     list_display = [ 'first_name', 'last_name', 'gender', 'age',]
-
 
 
 
@@ -16,5 +15,5 @@ class HospitalAdmin(admin.ModelAdmin):
 
 @admin.register(Physician)
 class PhysicianAdmin(admin.ModelAdmin):
-    list_display = [ 'first_name', 'last_name', 'expertise',]
+    list_display = [ 'first_name', 'last_name', 'expertise', ]
  
