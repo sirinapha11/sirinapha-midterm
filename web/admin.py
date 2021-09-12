@@ -9,7 +9,7 @@ class PatientAdmin(admin.ModelAdmin):
 
 @admin.register(Hospital)
 class HospitalAdmin(admin.ModelAdmin):
-    list_display = [ 'Hospital_name',]
+    list_display = [ 'hospital_name',]
 
 
 

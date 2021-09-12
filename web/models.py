@@ -27,7 +27,7 @@ class Hospital(models.Model):
     """Model definition for Hospital."""
 
     # TODO: Define fields here
-    Hospital_name = models.CharField(max_length=255)
+    hospital_name = models.CharField(max_length=255)
 
     class Meta:
         """Meta definition for Hospital."""
@@ -37,7 +37,7 @@ class Hospital(models.Model):
 
     def __str__(self):
         """Unicode representation of Hospital."""
-        return self.Hospital_name
+        return self.hospital_name
 
 
 
